@@ -467,7 +467,7 @@
               <style>
   /* Temno rdeč okvir obrazca */
   .form-container {
-    max-width: 500px;
+    max-width: 800px;
     margin: 40px auto;
     padding: 30px;
     background-color: #800020; /* Temno rdeča / burgundska */
@@ -538,27 +538,27 @@
 </style>
 
 <div class="form-container">
-  <h2>Kontaktiraj nas</h2>
+  <h2>Contact form</h2>
 
   <!-- Zamenjaj TVOJ_FREEFORM_URL s svojo povezavo iz Freeforma -->
-  <form action="TVOJ_FREEFORM_URL" method="POST">
+  <form action="https://formspree.io/f/xqpzdalj" method="POST">
     
     <div class="form-group">
-      <label for="name">Ime</label>
-      <input type="text" id="name" name="name" placeholder="Tvoje ime" required>
+      <label for="name">Name</label>
+      <input type="text" id="name" name="name" placeholder="Your name" required>
     </div>
 
     <div class="form-group">
-      <label for="email">E-pošta</label>
-      <input type="email" id="email" name="email" placeholder="tvoj@email.com" required>
+      <label for="email">e-mail</label>
+      <input type="email" id="email" name="email" placeholder="example@email.com" required>
     </div>
 
     <div class="form-group">
-      <label for="message">Sporočilo</label>
-      <textarea id="message" name="message" rows="5" placeholder="Tvoje sporočilo..." required></textarea>
+      <label for="message">Request</label>
+      <textarea id="message" name="message" rows="5" placeholder="What do you wanr..." required></textarea>
     </div>
 
-    <button type="submit">Pošlji</button>
+    <button type="submit">Send</button>
   </form>
 </div>
                </div>
