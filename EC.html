@@ -14,8 +14,9 @@
             line-height: 1.6;
         }
 
+        /* Glavni kontejner, ki določa maksimalno širino vsebine na strani */
         .container {
-            max-width: 1200px;
+            max-width: 1100px;
             margin: 0 auto;
             padding: 0 20px;
         }
@@ -68,15 +69,11 @@
 
         /* --- KONTAKTNA SEKCIJA --- */
         .contact-section {
-            padding: 80px 0;
+            padding: 60px 0;
         }
 
-        /* Mreža nastavljena tako, da da obrazcu veliko več prostora */
-        .contact-grid {
-            display: grid;
-            grid-template-columns: 1fr 1.8fr;
-            gap: 40px;
-            align-items: start;
+        .contact-info {
+            margin-bottom: 40px;
         }
 
         .contact-info h1 {
@@ -84,18 +81,18 @@
             font-weight: 800;
             text-transform: uppercase;
             letter-spacing: -1px;
-            margin-bottom: 25px;
+            margin-bottom: 15px;
         }
 
         .contact-info p.lead {
             font-size: 16px;
             line-height: 1.6;
-            margin-bottom: 30px;
+            margin-bottom: 20px;
             color: #222;
         }
 
         .contact-details {
-            margin-bottom: 30px;
+            margin-bottom: 20px;
         }
 
         .detail-item {
@@ -147,9 +144,9 @@
             color: white;
         }
 
-        /* --- OBRAZEC (Raztegnjen na 100% desnega stolpca) --- */
+        /* --- POPOLNOMA RAZTEGNJEN OBRAZEC --- */
         .form-container {
-            width: 100%;
+            width: 100%; /* Raztegne se čez celotno razpoložljivo širino */
             padding: 40px;
             background-color: #800020; /* Temno rdeča / burgundska */
             border: 3px solid #4a0013;
@@ -157,6 +154,8 @@
             box-shadow: 0 4px 15px rgba(0, 0, 0, 0.3);
             font-family: sans-serif;
             color: #ffffff;
+            box-sizing: border-box;
+            margin-top: 30px;
         }
 
         .form-container h2 {
@@ -169,6 +168,7 @@
 
         .form-group {
             margin-bottom: 20px;
+            width: 100%;
             text-align: left;
         }
 
@@ -183,10 +183,10 @@
         .form-group input,
         .form-group textarea {
             width: 100%;
-            padding: 12px 15px;
+            padding: 14px 18px;
             border: 2px solid #5a0017;
             border-radius: 8px;
-            font-size: 15px;
+            font-size: 16px;
             box-sizing: border-box;
             background-color: #ffffff;
             color: #333333;
@@ -202,12 +202,12 @@
 
         button[type="submit"] {
             width: 100%;
-            padding: 14px;
+            padding: 16px;
             background-color: #ffffff;
             color: #800020;
             border: 2px solid #ffffff;
             border-radius: 8px;
-            font-size: 16px;
+            font-size: 18px;
             font-weight: bold;
             cursor: pointer;
             transition: background-color 0.2s, color 0.2s;
@@ -216,13 +216,6 @@
         button[type="submit"]:hover {
             background-color: #f0f0f0;
             color: #5a0017;
-        }
-
-        /* Prilagoditev za manjše zaslone */
-        @media (max-width: 768px) {
-            .contact-grid {
-                grid-template-columns: 1fr;
-            }
         }
     </style>
 </head>
@@ -249,9 +242,9 @@
 
     <!-- KONTAKTNA SEKCIJA -->
     <section class="contact-section">
-        <div class="container contact-grid">
+        <div class="container">
 
-            <!-- Levi del: Informacije -->
+            <!-- Zgornji del: Informacije -->
             <div class="contact-info">
                 <h1>CONTACT ME</h1>
                 <p class="lead">Via email, instagram...</p>
@@ -268,7 +261,7 @@
                 </div>
             </div>
 
-            <!-- Desni del: Obrazec -->
+            <!-- Spodnji del: Popolnoma raztegnjen obrazec -->
             <div class="form-container">
                 <h2>Contact form</h2>
 
