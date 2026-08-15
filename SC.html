@@ -1,0 +1,282 @@
+<title>Katariina M&#228kinen - CONTACT</title>
+    <style>
+        * {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+        }
+
+        body {
+            background-color: #fbf9f1;
+            color: #000000;
+            line-height: 1.6;
+        }
+
+        /* Glavni kontejner, ki določa maksimalno širino vsebine na strani */
+        .container {
+            max-width: 800px;
+            margin: 0 auto;
+            padding: 0 20px;
+        }
+
+        /* --- GLAVA (Navigacija in Logotip) --- */
+        header {
+            background-color: #ffffff;
+            border-bottom: 1px solid #eeeeee;
+            padding: 20px 0;
+        }
+
+        .nav-container {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .logo {
+            font-size: 24px;
+            font-weight: bold;
+            text-transform: uppercase;
+            letter-spacing: 2px;
+        }
+
+        .logo span {
+            color: #632024;
+        }
+
+        nav ul {
+            display: flex;
+            list-style: none;
+        }
+
+        nav ul li {
+            margin-left: 20px;
+        }
+
+        nav ul li a {
+            text-decoration: none;
+            color: #555;
+            font-weight: 500;
+            transition: color 0.3s;
+            text-transform: uppercase;
+            font-size: 14px;
+        }
+
+        nav ul li a:hover {
+            color: #8a7a5f;
+        }
+
+        /* --- KONTAKTNA SEKCIJA --- */
+        .contact-section {
+            padding: 60px 0;
+        }
+
+        .contact-info {
+            margin-bottom: 40px;
+        }
+
+        .contact-info h1 {
+            font-size: 48px;
+            font-weight: 800;
+            text-transform: uppercase;
+            letter-spacing: -1px;
+            margin-bottom: 15px;
+        }
+
+        .contact-info p.lead {
+            font-size: 16px;
+            line-height: 1.6;
+            margin-bottom: 20px;
+            color: #222;
+        }
+
+        .contact-details {
+            margin-bottom: 20px;
+        }
+
+        .detail-item {
+            font-size: 20px;
+            font-weight: 600;
+            margin-bottom: 15px;
+            display: flex;
+            align-items: center;
+        }
+
+        .detail-item a {
+            color: #000000;
+            text-decoration: none;
+            transition: color 0.2s;
+        }
+
+        .detail-item a:hover {
+            color: #8cb63d;
+        }
+
+        .arrow-green {
+            color: #8cb63d;
+            margin-left: 8px;
+            font-weight: bold;
+        }
+
+        .social-icons {
+            display: flex;
+            gap: 15px;
+        }
+
+        .social-box {
+            background-color: #e5e3da;
+            width: 40px;
+            height: 40px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            text-decoration: none;
+            color: #000;
+            font-weight: bold;
+            font-size: 18px;
+            border-radius: 2px;
+            transition: background-color 0.2s;
+        }
+
+        .social-box:hover {
+            background-color: #8cb63d;
+            color: white;
+        }
+
+        /* --- POPOLNOMA RAZTEGNJEN OBRAZEC --- */
+        .form-container {
+            width: 100%; /* Raztegne se čez celotno razpoložljivo širino */
+            padding: 40px;
+            background-color: #800020; /* Temno rdeča / burgundska */
+            border: 3px solid #4a0013;
+            border-radius: 24px;
+            box-shadow: 0 4px 15px rgba(0, 0, 0, 0.3);
+            font-family: sans-serif;
+            color: #ffffff;
+            box-sizing: border-box;
+            margin-top: 30px;
+        }
+
+        .form-container h2 {
+            margin-top: 0;
+            margin-bottom: 25px;
+            color: #ffffff;
+            text-align: center;
+            font-size: 28px;
+        }
+
+        .form-group {
+            margin-bottom: 20px;
+            width: 100%;
+            text-align: left;
+        }
+
+        .form-group label {
+            display: block;
+            margin-bottom: 8px;
+            font-weight: 600;
+            color: #f0f0f0;
+            font-size: 15px;
+        }
+
+        .form-group input,
+        .form-group textarea {
+            width: 100%;
+            padding: 14px 18px;
+            border: 2px solid #5a0017;
+            border-radius: 8px;
+            font-size: 16px;
+            box-sizing: border-box;
+            background-color: #ffffff;
+            color: #333333;
+            transition: border-color 0.2s, box-shadow 0.2s;
+        }
+
+        .form-group input:focus,
+        .form-group textarea:focus {
+            border-color: #ff6b81;
+            outline: none;
+            box-shadow: 0 0 8px rgba(255, 107, 129, 0.5);
+        }
+
+        button[type="submit"] {
+            width: 100%;
+            padding: 16px;
+            background-color: #ffffff;
+            color: #800020;
+            border: 2px solid #ffffff;
+            border-radius: 8px;
+            font-size: 18px;
+            font-weight: bold;
+            cursor: pointer;
+            transition: background-color 0.2s, color 0.2s;
+        }
+
+        button[type="submit"]:hover {
+            background-color: #f0f0f0;
+            color: #5a0017;
+        }
+    </style>
+</head>
+<body>
+
+    <!-- GLAVA -->
+    <header>
+        <div class="container nav-container">
+            <div class="logo">Katariina<span>M&#228kinen</span></div>
+            <nav>
+                <ul>
+                    <li><a href="index.html">HOME</a></li>
+                    <li><a href="EAM.html">ABOUT ME</a></li>
+                    <li><a href="#">GALLERY</a></li>
+                    <li><a href="#">COMMISSIONS</a></li>
+                    <li><a href="EC.html">CONTACT</a></li>
+                    <li><a href="#">|</a></li>
+                    <li><a href="SH.html">SUOMI</a></li>
+                    <li><a href="index.html">ENGLISH</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <!-- KONTAKTNA SEKCIJA -->
+    <section class="contact-section">
+        <div class="container">
+
+            <!-- Zgornji del: Informacije -->
+            <div class="contact-info">
+                <h1>CONTACT ME</h1>
+                <p class="lead">Via email, instagram...</p>
+
+                <div class="social-icons">
+                    <a href="https://www.facebook.com/katariina.makinen.92" class="social-box" target="_blank">f</a>
+                    <a href="https://www.instagram.com/katariina.makinen/" class="social-box" target="_blank">ig</a>
+                </div>
+            </div>
+
+            <!-- Spodnji del: Popolnoma raztegnjen obrazec -->
+            <div class="form-container">
+                <h2>Contact form</h2>
+
+                <form action="https://formspree.io/f/xqpzdalj" method="POST">
+                    
+                    <div class="form-group">
+                        <label for="name">Name</label>
+                        <input type="text" id="name" name="name" placeholder="Your name" required>
+                    </div>
+
+            
+
+                    <div class="form-group">
+                        <label for="message">Request</label>
+                        <textarea id="message" name="message" rows="5" placeholder="What do you want..." required></textarea>
+                    </div>
+
+                    <button type="submit">Send</button>
+                </form>
+            </div>
+
+        </div>
+    </section>
+
+</body>
