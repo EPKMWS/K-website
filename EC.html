@@ -464,46 +464,49 @@
                </div>
 
               <!-- modify this form HTML and place wherever you want your form -->
-              <style>
-  /* Temno rdeč okvir obrazca */
+             <style>
+  /* Okvir obrazca - prilagaja se širini svojega stolpca */
   .form-container {
-    max-width: 800px;
-    margin: 40px auto;
-    padding: 30px;
+    width: 100%;
+    padding: 40px;
     background-color: #800020; /* Temno rdeča / burgundska */
-    border: 3px solid #4a0013; /* Temnejši zunanji rob */
-    border-radius: 50px;
+    border: 3px solid #4a0013;
+    border-radius: 24px;
     box-shadow: 0 4px 15px rgba(0, 0, 0, 0.3);
     font-family: sans-serif;
     color: #ffffff;
+    box-sizing: border-box;
   }
 
   .form-container h2 {
     margin-top: 0;
-    margin-bottom: 20px;
+    margin-bottom: 25px;
     color: #ffffff;
     text-align: center;
+    font-size: 28px;
   }
 
   .form-group {
-    margin-bottom: 18px;
+    margin-bottom: 20px;
+    width: 100%;
     text-align: left;
   }
 
   .form-group label {
     display: block;
-    margin-bottom: 6px;
+    margin-bottom: 8px;
     font-weight: 600;
     color: #f0f0f0;
-    font-size: 14px;
+    font-size: 15px;
   }
 
+  /* Vnosna polja zasedejo celotno širino okvira */
   .form-group input,
   .form-group textarea {
     width: 100%;
-    padding: 10px 12px;
+    padding: 12px 15px;
     border: 2px solid #5a0017;
-    border-radius: 6px;
+    border-radius: 8px;
     font-size: 15px;
     box-sizing: border-box;
     background-color: #ffffff;
@@ -520,11 +523,11 @@
 
   button[type="submit"] {
     width: 100%;
-    padding: 12px;
+    padding: 14px;
     background-color: #ffffff;
     color: #800020;
     border: 2px solid #ffffff;
-    border-radius: 6px;
+    border-radius: 8px;
     font-size: 16px;
     font-weight: bold;
     cursor: pointer;
@@ -540,7 +543,6 @@
 <div class="form-container">
   <h2>Contact form</h2>
 
-  <!-- Zamenjaj TVOJ_FREEFORM_URL s svojo povezavo iz Freeforma -->
   <form action="https://formspree.io/f/xqpzdalj" method="POST">
     
     <div class="form-group">
@@ -555,7 +557,7 @@
 
     <div class="form-group">
       <label for="message">Request</label>
-      <textarea id="message" name="message" rows="5" placeholder="What do you wanr..." required></textarea>
+      <textarea id="message" name="message" rows="5" placeholder="What do you want..." required></textarea>
     </div>
 
     <button type="submit">Send</button>
