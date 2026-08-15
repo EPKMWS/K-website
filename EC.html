@@ -464,30 +464,103 @@
                </div>
 
               <!-- modify this form HTML and place wherever you want your form -->
-              <table border=2>
-			  <div class="form-container">
-			    <h2>CONTACT ME</h2>
-			    <form action="https://formspree.io/f/xqpzdalj" method="POST">
+              <style>
+  /* Temno rdeč okvir obrazca */
+  .form-container {
+    max-width: 500px;
+    margin: 40px auto;
+    padding: 30px;
+    background-color: #800020; /* Temno rdeča / burgundska */
+    border: 3px solid #4a0013; /* Temnejši zunanji rob */
+    border-radius: 12px;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.3);
+    font-family: sans-serif;
+    color: #ffffff;
+  }
 
-			      <div class="form-group">
-			        <label for="name">Name</label>
-			        <input type="text" id="name" name="name" placeholder="Your name" required>
-			      </div>
+  .form-container h2 {
+    margin-top: 0;
+    margin-bottom: 20px;
+    color: #ffffff;
+    text-align: center;
+  }
 
-			      <div class="form-group">
-			        <label for="email">E-mail</label>
-			        <input type="email" id="email" name="email" placeholder="example@gmail.com" required>
-			      </div>
+  .form-group {
+    margin-bottom: 18px;
+    text-align: left;
+  }
 
-			      <div class="form-group">
-			        <label for="message">What you want</label> <br>
-			        <textarea id="message" name="message" rows="5" placeholder="WHAT YOU WANT" required></textarea>
-			      </div>
+  .form-group label {
+    display: block;
+    margin-bottom: 6px;
+    font-weight: 600;
+    color: #f0f0f0;
+    font-size: 14px;
+  }
 
-			      <button type="submit">Send</button>
-			    </form>
+  .form-group input,
+  .form-group textarea {
+    width: 100%;
+    padding: 10px 12px;
+    border: 2px solid #5a0017;
+    border-radius: 6px;
+    font-size: 15px;
+    box-sizing: border-box;
+    background-color: #ffffff;
+    color: #333333;
+    transition: border-color 0.2s, box-shadow 0.2s;
+  }
+
+  .form-group input:focus,
+  .form-group textarea:focus {
+    border-color: #ff6b81;
+    outline: none;
+    box-shadow: 0 0 8px rgba(255, 107, 129, 0.5);
+  }
+
+  button[type="submit"] {
+    width: 100%;
+    padding: 12px;
+    background-color: #ffffff;
+    color: #800020;
+    border: 2px solid #ffffff;
+    border-radius: 6px;
+    font-size: 16px;
+    font-weight: bold;
+    cursor: pointer;
+    transition: background-color 0.2s, color 0.2s;
+  }
+
+  button[type="submit"]:hover {
+    background-color: #f0f0f0;
+    color: #5a0017;
+  }
+</style>
+
+<div class="form-container">
+  <h2>Kontaktiraj nas</h2>
+
+  <!-- Zamenjaj TVOJ_FREEFORM_URL s svojo povezavo iz Freeforma -->
+  <form action="TVOJ_FREEFORM_URL" method="POST">
+    
+    <div class="form-group">
+      <label for="name">Ime</label>
+      <input type="text" id="name" name="name" placeholder="Tvoje ime" required>
+    </div>
+
+    <div class="form-group">
+      <label for="email">E-pošta</label>
+      <input type="email" id="email" name="email" placeholder="tvoj@email.com" required>
+    </div>
+
+    <div class="form-group">
+      <label for="message">Sporočilo</label>
+      <textarea id="message" name="message" rows="5" placeholder="Tvoje sporočilo..." required></textarea>
+    </div>
+
+    <button type="submit">Pošlji</button>
+  </form>
 </div>
-</table>
                </div>
 
            </div>
