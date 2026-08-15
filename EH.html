@@ -1,0 +1,334 @@
+<!DOCTYPE html>
+<html lang="sl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Katariina M&#228kinen</title>
+
+    <style>
+        /* --- SPLOŠNE NASTAVITVE (pisava in barve) --- */
+        * {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+        }
+
+        body {
+            background-color: #fcfcfc;
+            color: #333;
+            line-height: 1.6;
+        }
+
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 20px;
+        }
+
+        /* --- GLAVA (Navigacija in Logotip) --- */
+        header {
+            background-color: #ffffff;
+            border-bottom: 1px solid #eeeeee;
+            padding: 20px 0;
+        }
+
+        .nav-container {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .logo {
+            font-size: 24px;
+            font-weight: bold;
+            text-transform: uppercase;
+            letter-spacing: 2px;
+        }
+
+        .logo span {
+            color: #632024;
+        }
+
+        nav ul {
+            display: flex;
+            list-style: none;
+        }
+
+        nav ul li {
+            margin-left: 20px;
+        }
+
+        nav ul li a {
+            text-decoration: none;
+            color: #555;
+            font-weight: 500;
+            transition: color 0.3s;
+            text-transform: uppercase;
+            font-size: 14px;
+        }
+
+        nav ul li a:hover {
+            color: #8a7a5f;
+        }
+
+        /* --- HERO RAZDELEK (Mreža slik na vrhu) --- */
+        .hero-grid {
+            display: grid;
+            grid-template-columns: 2fr 1fr;
+            grid-gap: 15px;
+            margin-top: 30px;
+            margin-bottom: 50px;
+        }
+
+        .hero-main {
+            position: relative;
+
+            background: linear-gradient(rgba(0,0,0,0.4), rgba(0,0,0,0.4)), url("3.jpeg") no-repeat center center/cover;
+            color: white;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            padding: 40px;
+        }
+
+        .hero-side-container {
+            display: flex;
+            flex-direction: column;
+            gap: 15px;
+        }
+
+        .hero-side-box {
+            position: relative;
+            height: 192px;
+            color: white;
+            display: flex;
+            align-items: center;
+            padding: 20px;
+            text-decoration: none;
+            font-size: 20px;
+            font-weight: bold;
+            text-transform: uppercase;
+            transition: transform 0.3s;
+        }
+
+        .hero-side-box:hover {
+            transform: scale(1.02);
+        }
+
+        .side-events {
+            background: linear-gradient(rgba(0,0,0,0.4), rgba(0,0,0,0.4)), url("4.jpeg") no-repeat center center/cover;
+        }
+
+        .side-exhibitions {
+            background: linear-gradient(rgba(0,0,0,0.4), rgba(0,0,0,0.4)), url("1.jpeg") no-repeat center center/cover;
+        }
+
+        /* --- RAZDELEK "O NAS" --- */
+        .about-section {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 40px;
+            align-items: center;
+            margin-bottom: 60px;
+        }
+
+        .about-image img {
+            width: 100%;
+            height: 350px;
+            object-fit: cover;
+            border-radius: 4px;
+        }
+
+        .about-text h2 {
+            font-size: 36px;
+            margin-bottom: 20px;
+            font-weight: 300;
+        }
+
+        .about-text p {
+            color: #666;
+            margin-bottom: 25px;
+        }
+
+        .btn {
+            display: inline-block;
+            padding: 12px 30px;
+            border: 2px solid #8a7a5f;
+            color: #8a7a5f;
+            text-decoration: none;
+            text-transform: uppercase;
+            font-size: 14px;
+            font-weight: bold;
+            transition: all 0.3s;
+        }
+
+        .btn:hover {
+            background-color: #8a7a5f;
+            color: #fff;
+        }
+
+        /* --- RAZDELEK "DELA UMETNIKOV" --- */
+        .works-section {
+            margin-bottom: 60px;
+        }
+
+        .section-title {
+            font-size: 28px;
+            margin-bottom: 30px;
+            border-bottom: 1px solid #ddd;
+            padding-bottom: 10px;
+            font-weight: 400;
+        }
+
+        .works-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 20px;
+        }
+
+        .work-card {
+            background: white;
+            border: 1px solid #eee;
+            padding: 10px;
+            box-shadow: 0 2px 5px rgba(0,0,0,0.05);
+        }
+
+        .work-card img {
+            width: 100%;
+            height: 250px;
+            object-fit: cover;
+        }
+
+        .work-info {
+            padding: 15px 5px;
+        }
+
+        .work-info h3 {
+            font-size: 16px;
+            margin-bottom: 5px;
+        }
+
+        .work-info p {
+            font-size: 14px;
+            color: #777;
+        }
+
+        /* --- SPODNJI DEL (Cene in Mnenja) --- */
+        .bottom-section {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 40px;
+            margin-bottom: 60px;
+            border-top: 1px solid #eee;
+            padding-top: 40px;
+        }
+
+        .prices-list, .testimonials {
+            background: #f9f9f9;
+            padding: 30px;
+            border-radius: 4px;
+        }
+
+        .price-item {
+            display: flex;
+            justify-content: space-between;
+            border-bottom: 1px dashed #ccc;
+            padding: 10px 0;
+        }
+
+        .testimonial-item blockquote {
+            font-style: italic;
+            color: #555;
+            margin-bottom: 15px;
+        }
+
+
+        }
+    </style>
+</head>
+<body>
+
+    <!-- 1. GLAVA (Logotip in Meni) -->
+    <header>
+        <div class="container nav-container">
+            <div class="logo">Katariina<span>M&#228kinen</span></div>
+            <nav>
+                <ul>
+                    <li><a href="EH.html">HOME</a></li>
+                    <li><a href="#">ABOUT ME</a></li>
+                    <li><a href="#">GALLERY</a></li>
+                    <li><a href="#">COMMISIONS</a></li>
+                    <li><a href="EC.html">CONTACT</a></li>
+                    <li><a href="#">|</a><li>
+                    <li><a href="SH.html">SUOMI</a><li>
+                    <li><a href="EH.html">ENGLISH</a><li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <div class="container">
+
+        <!-- 2. BANERJI NA VRHU (Kot na tvoji sliki) -->
+        <div class="hero-grid">
+            <!-- Glavni levi baner -->
+            <!-- TUKAJ lahko spremeniš sliko v ozadju (zamenjaj URL v narekovajih zgoraj v CSS-u pod .hero-main ali pa jo pusti za test) -->
+            <div class="hero-main">
+                <h1 style="font-size: 42px; margin-bottom: 10px;">Katariina M&#228kinen</h1>
+                <p style="font-size: 18px; margin-bottom: 20px;">PAINTER</p>
+                <div>
+                    <a href="#" class="btn" style="color: white; border-color: white;">LEARN MORE</a>
+                </div>
+            </div>
+
+            <!-- Desna dva manjša banerja -->
+            <div class="hero-side-container">
+                <a href="#" class="hero-side-box side-events">
+                    <span>GALLERY</span>
+
+                </a>
+                <a href="#" class="hero-side-box side-exhibitions">
+                    <span>COMMISIONS</span>
+                </a>
+            </div>
+        </div>
+
+        <!-- 3. RAZDELEK O NAS -->
+        <div class="about-section">
+            <div class="about-image">
+                <!-- TUKAJ lahko zamenjaš povezavo do slike (vstaviš npr. "slika-galerije.jpg") -->
+                <img src="A.jpeg" alt="Notranjost galerije">
+            </div>
+            <div class="about-text">
+                <h2>ABOUT ME</h2>
+                <p>Painter or smth</p>
+                <a href="#" class="btn">LEARN MORE</a>
+            </div>
+        </div>
+
+
+
+        <!-- 5. CENE IN MNENJA -->
+        <div class="bottom-section">
+            <!-- Cene -->
+            <div class="prices-list">
+                <h3 style="margin-bottom: 20px; font-size: 22px;">PRICES</h3>
+                <div class="price-item">
+                    <span>Oil paint</span>
+                    <strong>from 67 €</strong>
+                </div>
+                <div class="price-item">
+                    <span>watercolour</span>
+                    <strong>from 67 €</strong>
+                </div>
+                <div class="price-item">
+                    <span>Gouachd</span>
+                    <strong>from 67 €</strong>
+                </div>
+            </div>
+
+
+
+</body>
+</html>
