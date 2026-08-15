@@ -5,7 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Katariina M&#228kinen</title>
     <style>
-* {
+        * {
             box-sizing: border-box;
             margin: 0;
             padding: 0;
@@ -24,7 +24,6 @@
             padding: 0 20px;
         }
 
-        
         header {
             background-color: #ffffff;
             border-bottom: 1px solid #eeeeee;
@@ -68,30 +67,57 @@
 
         nav ul li a:hover {
             color: #8a7a5f;
+        } /* Tukaj je manjkal zaklepaj */
+
+        /* --- NOVI DEL ZA SLIKO ČEZ CEL EKRAN --- */
+        .hero-slika {
+            width: 100%;
+            height: calc(100vh - 70px); /* Natančno zapolni preostanek ekrana pod navigacijo */
+            object-fit: cover;           /* Slika se lepo prilagodi brez popačenja */
+            display: block;
+        }
+
+        /* --- NOVI DEL ZA BELO OZADJE SPODAJ --- */
+        .belo-ozadje {
+            background-color: #ffffff;
+            width: 100%;
+            padding: 60px 0;
+        }
     </style>
-    </head>
-	<body>
+</head>
+<body>
 
-
-	    <header>
-	        <div class="container nav-container">
-	            <div class="logo">Katariina<span>M&#228kinen</span></div>
-	            <nav>
-	                <ul>
-	                    <li><a href="SH.html">ETUSIVUT</a></li>
-	                    <li><a href="SAM.html">MINUSTA</a></li>
-	                    <li><a href="SG.html">GALLERIA</a></li>
-	                    <li><a href="SCM.HTML">TILAUSTYÖT</a></li>
-	                    <li><a href="SC.html">YHTEYSTIEDOT</a></li>
-	                    <li><a href="#">|</a><li>
-	                    <li><a href="SH.html">SUOMI</a><li>
-	                    <li><a href="index.html">ENGLISH</a><li>
-	                </ul>
-	            </nav>
-	        </div>
+    <header>
+        <div class="container nav-container">
+            <div class="logo">Katariina<span>M&#228kinen</span></div>
+            <nav>
+                <ul>
+                    <li><a href="SH.html">ETUSIVUT</a></li>
+                    <li><a href="SAM.html">MINUSTA</a></li>
+                    <li><a href="SG.html">GALLERIA</a></li>
+                    <li><a href="SCM.HTML">TILAUSTYÖT</a></li>
+                    <li><a href="SC.html">YHTEYSTIEDOT</a></li>
+                    <li><a href="#">|</a></li>
+                    <li><a href="SH.html">SUOMI</a></li>
+                    <li><a href="index.html">ENGLISH</a></li>
+                </ul>
+            </nav>
+        </div>
     </header>
-  
-		
-	</body>
 
-    </html>
+    <!-- 1. SLIKA TAKOJ POD MENIJEM (Zamenjaj 'tvoja-slika.jpg' s pravim imenom) -->
+    <img src="am1.jpg" alt="Katariina Mäkinen" class="hero-slika">
+
+    <!-- 2. BELI DEL POD SLIKO ZA NADALJNO KODIRANJE -->
+    <div class="belo-ozadje">
+        <div class="container">
+            
+            <!-- Sem spodaj sedaj dodajaš svoj tekst, nove slike, itd. -->
+            <h2>O meni / Minusta</h2>
+            <p>Koji pofukan kurac</p>
+
+        </div>
+    </div>
+
+</body>
+</html>
